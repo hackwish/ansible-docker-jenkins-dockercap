@@ -1,0 +1,5 @@
+---
+- name: Install httplib2
+  apt:
+      name=python-httplib2
+      update_cache=yes
