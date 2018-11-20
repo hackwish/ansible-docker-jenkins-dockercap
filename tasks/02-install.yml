@@ -17,11 +17,11 @@
     ports:
      - "8080:8080"
      - "50000:50000"
-    enviroments:
-     - JAVA_OPTS=-Dhudson.footerURL=https://www.i-med.cl
-     - RANCHER_NETWORK=true
+    env:
+      JAVA_OPTS: -Dhudson.footerURL=https://www.i-med.cl
+      RANCHER_NETWORK: true
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - $HOME/ssh/id_rsa:$HOME/.ssh/id_rsa 
-      - $HOME/ssh/id_rsa.pub:$HOME/.ssh/id_rsa.pub
+      # - $HOME/ssh/id_rsa:$HOME/.ssh/id_rsa 
+      # - $HOME/ssh/id_rsa.pub:$HOME/.ssh/id_rsa.pub
       - /opt/jenkins:/var/jenkins_home
