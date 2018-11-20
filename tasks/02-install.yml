@@ -11,8 +11,8 @@
 
 - name: Run Jenkins
   docker_container:
-    name: jenkins
-    image: jenkins/jenkins:lts
+    name: jenkins-dockercap
+    image: hackwish/jenkins-dockercap
     restart_policy: unless-stopped
     ports:
      - "8080:8080"
